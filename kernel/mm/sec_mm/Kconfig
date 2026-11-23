@@ -1,0 +1,14 @@
+menu "SEC Memory Management Options"
+
+config SEC_MM
+	tristate "Enable SEC MM"
+	depends on ANDROID_VENDOR_HOOKS
+	default m
+	help
+	  SEC memory management module.
+	  With this feature enabled, system memory status and process lists
+	  are printed in kernel log when the device goes low on file cache or
+	  kernel panic events.
+          This also supports tuning mm params via vendor hook.
+
+endmenu
